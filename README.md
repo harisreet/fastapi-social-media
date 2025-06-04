@@ -1,44 +1,29 @@
 # 📱 Social Media API with FastAPI
----
 
 ## 🔥 Features
 
-- 🧑 **User Management** – Register, login, and manage user profiles
-- 🔐 **JWT Authentication** – Secure access with OAuth2
-- 📝 **Posts** – Full CRUD support with user ownership
-- 👍 **Votes** – Like/Dislike functionality (one vote per user per post)
-- 🗃️ **Database** – PostgreSQL + SQLAlchemy ORM + Alembic
-- 🐳 **Dockerized** – Easily run using Docker Compose
-- ✅ **Testing** – Pytest-based tests for major endpoints
-- ☁️ **Docker Hub** – Pull the API image directly from Docker Hub
-
----
+- 🧑 **User Management** – Register, login, and manage user profiles  
+- 🔐 **JWT Authentication** – Secure access with OAuth2  
+- 📝 **Posts** – Full CRUD support with user ownership  
+- 👍 **Votes** – Like/Dislike functionality (one vote per user per post)  
+- 🗃️ **Database** – PostgreSQL + SQLAlchemy ORM + Alembic  
+- 🐳 **Dockerized** – Easily run using Docker Compose  
+- ✅ **Testing** – Pytest-based tests for major endpoints  
+- ☁️ **Docker Hub** – Pull the API image directly from Docker Hub  
 
 ## 🧰 Tech Stack
 
-- **Framework**: FastAPI
-- **Database**: PostgreSQL
-- **ORM**: SQLAlchemy
-- **Migrations**: Alembic
-- **Auth**: JWT + OAuth2 (PasswordBearer)
-- **Password Hashing**: Passlib (bcrypt)
-- **Testing**: Pytest, TestClient
-- **Containerization**: Docker, Docker Compose
-- **Deployment**: Docker Hub
+- **Framework**: FastAPI  
+- **Database**: PostgreSQL  
+- **ORM**: SQLAlchemy  
+- **Migrations**: Alembic  
+- **Auth**: JWT + OAuth2 (PasswordBearer)  
+- **Password Hashing**: Passlib (bcrypt)  
+- **Testing**: Pytest, TestClient  
+- **Containerization**: Docker, Docker Compose  
+- **Deployment**: Docker Hub  
 
----
-
-## 📦 Docker Hub Image
-
-🪣 Pull the latest API image:
-
-```bash
-docker pull yourdockerhubusername/social-media-api:latest
-
----
-
-## 🖥️ Local setup
-
+## 🖥️ Local Setup
 
 ### Steps
 
@@ -48,11 +33,12 @@ docker pull yourdockerhubusername/social-media-api:latest
     git clone https://github.com/harisreet/fastapi-social-media.git
     cd fastapi-social-media
     ```
-2. ** Set Environment Variables:**
- 
-   Create a .env file in the root directory with the following values:
 
-   ```ini
+2. **Set Environment Variables:**
+
+    Create a `.env` file in the root directory with the following content:
+
+    ```ini
     DATABASE_HOSTNAME=localhost
     DATABASE_PORT=5432
     DATABASE_NAME=your_database_name
@@ -63,7 +49,7 @@ docker pull yourdockerhubusername/social-media-api:latest
     ACCESS_TOKEN_EXPIRE_MINUTES=60
     ```
 
-3. ** Run the API Server:**
+3. **Run the API Server:**
 
     ```bash
     uvicorn app.main:app --reload
@@ -71,15 +57,10 @@ docker pull yourdockerhubusername/social-media-api:latest
 
 4. **Access the API:**
 
-    - API docs: [http://localhost:8000/docs](http://localhost:8000/docs) 
+    Open your browser and go to: [http://localhost:8000/docs](http://localhost:8000/docs)
 
-5. ** run testing:**
-   
+5. **Run tests:**
+
     ```bash
-    pytest -v FASTAPI/test
+    pytest -v fastapi/test
     ```
-
-
-
-
-
